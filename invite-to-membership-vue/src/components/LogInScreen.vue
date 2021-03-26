@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="log-in-screen">
     <h2>Zaloguj się</h2>
     <section id="firebaseui-auth-container"></section>
   </div>
@@ -32,3 +32,9 @@ export default class LogInScreen extends Vue {
   }
 }
 </script>
+<style scoped>
+.log-in-screen {
+  margin-top: 60px;
+  text-align: center;
+}
+</style>
