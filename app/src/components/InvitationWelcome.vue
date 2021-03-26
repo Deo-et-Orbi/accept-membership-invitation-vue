@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h2>Hej {{displayName}}!</h2>
-    <p>{{ message }} </p>
+    <h2>Hej {{ displayName }}!</h2>
+    <p>{{ message }}</p>
     <h3>Już prawie możesz skorzystać z aplikacji mobilnej Deo et Orbi!</h3>
     <p>Jeszcze tylko zaloguj się/załóż konto.</p>
   </div>

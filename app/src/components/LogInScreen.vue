@@ -1,7 +1,7 @@
 <template>
   <div class="log-in-screen">
     <Explanation />
-    <section id="firebaseui-auth-container">Ładowanie autoryzacji...</section>
+    <section id="firebaseui-auth-container"></section>
   </div>
 </template>
 

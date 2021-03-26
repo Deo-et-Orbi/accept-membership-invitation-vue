@@ -24,12 +24,10 @@ export async function fetchFromPublicApi<T>(path: string): Promise<T> {
       "Content-Type": "application/json",
     },
   });
-  console.log(result);
   if (!result.ok) {
     const bodyJson = await result.json();
     throw new Error(bodyJson.error || "No error description");
   }
-  console.log(result);
   return result.json();
 }
 

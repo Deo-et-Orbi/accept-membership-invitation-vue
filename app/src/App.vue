@@ -4,7 +4,7 @@
       <InvitationWelcome v-if="invitation" :invitation="invitation" />
       <EnsureLoggedIn>
         <template #loggedIn>
-          Czy chcesz użyć tego konta jako konta członkowskiego Deo et Orbi?
+          <AcceptMembership @accept="acceptMembership()" @decline="logOut()" />
         </template>
         <template #loggedOut><LogInScreen /></template>
       </EnsureLoggedIn>
@@ -14,10 +14,16 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { EnsureLoggedIn, LogInScreen, InvitationWelcome } from "./components";
+import {
+  EnsureLoggedIn,
+  LogInScreen,
+  InvitationWelcome,
+  AcceptMembership,
+} from "./components";
 import { Invitation } from "./domain";
 import { Resource, StatefulResource } from "vue-stateful-resource";
 import { loadInvitation } from "./services";
+import firebase from "firebase/app";
 
 @Component({
   components: {
@@ -25,6 +31,7 @@ import { loadInvitation } from "./services";
     LogInScreen,
     StatefulResource,
     InvitationWelcome,
+    AcceptMembership,
   },
 })
 export default class App extends Vue {
@@ -51,6 +58,14 @@ export default class App extends Vue {
 
   get invitation(): Invitation | undefined {
     return this.invitationRes.result || undefined;
+  }
+
+  acceptMembership(): void {
+    console.log("Accept membership")
+  }
+
+  logOut(): void {
+    firebase.auth().signOut();
   }
 }
 </script>
