@@ -2,8 +2,7 @@
   <div id="app">
     <EnsureLoggedIn>
       <template #loggedIn>
-        <AppBar />
-        <InvitationsPanel />
+        Czy chcesz użyć tego konta jako konta członkowskiego Deo et Orbi?
       </template>
       <template #loggedOut><LogInScreen /></template>
     </EnsureLoggedIn>

@@ -1,6 +1,6 @@
 <template>
   <div class="log-in-screen">
-    <h2>Zaloguj się</h2>
+    <Explanation />
     <section id="firebaseui-auth-container">Ładowanie autoryzacji...</section>
   </div>
 </template>
@@ -10,8 +10,13 @@ import { Component, Vue } from "vue-property-decorator";
 import firebase from "firebase/app";
 import "firebaseui/dist/firebaseui.css";
 import * as firebaseui from "firebaseui";
+import Explanation from "./Explanation.vue";
 
-@Component
+@Component({
+  components: {
+    Explanation,
+  },
+})
 export default class LogInScreen extends Vue {
   mounted(): void {
     this.initializeFirebaseUI();
