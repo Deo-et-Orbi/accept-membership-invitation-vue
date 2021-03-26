@@ -4,7 +4,11 @@
       <InvitationWelcome v-if="invitation" :invitation="invitation" />
       <EnsureLoggedIn>
         <template #loggedIn>
-          <AcceptMembership @accept="acceptMembership()" @decline="logOut()" />
+          <AcceptMembership
+            :invitation="invitation"
+            @decline="logOut()"
+            @accepted="openThanksPage()"
+          />
         </template>
         <template #loggedOut><LogInScreen /></template>
       </EnsureLoggedIn>
@@ -60,12 +64,13 @@ export default class App extends Vue {
     return this.invitationRes.result || undefined;
   }
 
-  acceptMembership(): void {
-    console.log("Accept membership")
-  }
-
   logOut(): void {
     firebase.auth().signOut();
+  }
+
+  openThanksPage(): void {
+    window.location.href =
+      "https://deoetorbi.com/jestes-czlonkiem-zainstaluj-aplikacje/";
   }
 }
 </script>

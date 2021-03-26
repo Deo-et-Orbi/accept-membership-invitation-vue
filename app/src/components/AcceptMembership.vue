@@ -15,17 +15,24 @@
         <button class="yes" @click="accept()">Tak, to będzie moje konto</button>
         <button class="no" @click="decline()">Zaloguj się na inne konto</button>
       </div>
+      <p class="error" v-if="error">{{ error }}</p>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from "vue-property-decorator";
 import firebase from "firebase/app";
+import { acceptMembership } from "@/services";
+import { Invitation } from "@/domain";
 
 @Component
 export default class AcceptMembership extends Vue {
+  @Prop()
+  invitation!: Invitation;
+
   user: firebase.User | "" = "";
+  error = "";
 
   mounted(): void {
     this.user = firebase.auth().currentUser || "";
@@ -40,7 +47,10 @@ export default class AcceptMembership extends Vue {
   }
 
   accept(): void {
-    this.$emit("accept");
+    acceptMembership(this.invitation.id).then(
+      () => this.$emit("accepted"),
+      (err) => (this.error = "Nie można zatwierdzić członkostwa: " + err)
+    );
   }
 
   decline(): void {
