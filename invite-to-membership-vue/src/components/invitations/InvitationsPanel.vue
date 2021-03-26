@@ -1,6 +1,6 @@
 <template>
   <div class="m-4">
-    <b-card title="Wygeneruj link zaproszenia" class="mb-3">
+    <b-card bg-variant="light" header="Wygeneruj link zaproszenia" class="mb-3">
       <InviteForm @invited="reloadList()" />
     </b-card>
     <InvitationsList ref="list" />

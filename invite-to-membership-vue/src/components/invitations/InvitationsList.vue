@@ -1,6 +1,13 @@
 <template>
   <StatefulResource :resource="invitationsResource">
-    <b-table striped hover :items="items" :fields="fields"></b-table>
+    <b-table
+      bordered
+      head-variant="dark"
+      striped
+      hover
+      :items="items"
+      :fields="fields"
+    ></b-table>
   </StatefulResource>
 </template>
 
