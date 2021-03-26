@@ -7,3 +7,7 @@ export interface Invitation {
   createdTimestampS: number;
   acceptedTimestampS: number;
 }
+
+export function getInvitationLink(invitation: Invitation): string {
+  return `https://deoetorbi.com/akceptuj-zaproszenie/?deo=${invitation.id}`;
+}

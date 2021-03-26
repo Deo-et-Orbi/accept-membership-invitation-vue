@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <InviteForm />
-    <InvitationsList />
+  <div class="m-4">
+    <b-card title="Wygeneruj link zaproszenia" class="mb-3">
+      <InviteForm @invited="reloadList()" />
+    </b-card>
+    <InvitationsList ref="list" />
   </div>
 </template>
 
@@ -23,11 +25,17 @@ export default class InvitationsPanel extends Vue {
   }
 
   get displayName(): string {
-    return this.user ? this.user.displayName || "(no name)" : "(no user)";
+    return this.user
+      ? this.user.displayName || "(brak imienia i nazwiska)"
+      : "(brak użytkownika)";
   }
 
   async logOut(): Promise<void> {
     await firebase.auth().signOut();
+  }
+
+  reloadList(): void {
+    (this.$refs.list as any).reloadInvitations();
   }
 }
 </script>

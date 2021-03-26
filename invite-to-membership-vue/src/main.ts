@@ -26,7 +26,7 @@ async function initializeAppInviteToMembershipVue(mountTarget: string) {
   try {
     await initFirebaseFromJSON("/__/firebase/init.json");
   } catch (err) {
-    console.error(
+    console.warn(
       "Failed to load firebase from firebase hosting, " +
         "trying to load dev config. Error: ",
       err

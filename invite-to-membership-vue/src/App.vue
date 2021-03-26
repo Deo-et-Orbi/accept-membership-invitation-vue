@@ -30,4 +30,13 @@ import {
 export default class App extends Vue {}
 </script>
 
-<style></style>
+<style>
+.error {
+  display: block;
+  padding: 1rem;
+  background: rgba(255, 0, 0, 0.1);
+  color: red;
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  border-radius: 0.5rem;
+}
+</style>

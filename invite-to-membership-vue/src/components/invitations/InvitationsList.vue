@@ -7,7 +7,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { Resource, StatefulResource } from "vue-stateful-resource";
-import { Invitation } from "@/domain";
+import { getInvitationLink, Invitation } from "@/domain";
 import { loadInvitations } from "@/services";
 
 @Component({
@@ -19,12 +19,12 @@ export default class InvitationsList extends Vue {
   fields = [
     {
       key: "displayName",
-      label: "Display name",
+      label: "Imię i nazwisko",
       sortable: true,
     },
     {
       key: "message",
-      label: "Message",
+      label: "Wiadomość",
     },
     {
       key: "tiedEmail",
@@ -32,11 +32,15 @@ export default class InvitationsList extends Vue {
     },
     {
       key: "createdTime",
-      label: "Created time",
+      label: "Czas utworzenia",
     },
     {
       key: "statusText",
       label: "Status",
+    },
+    {
+      key: "linkURL",
+      label: "Link",
     },
   ];
 
@@ -48,8 +52,9 @@ export default class InvitationsList extends Vue {
     itemsSorted.sort((a, b) => b.createdTimestampS - a.createdTimestampS);
     return itemsSorted.map((item) => ({
       ...item,
-      statusText: item.acceptedTimestampS > 0 ? "Accepted" : "Pending",
+      statusText: item.acceptedTimestampS > 0 ? "Zaakceptowane" : "Oczekujące",
       createdTime: new Date(item.createdTimestampS * 1000).toDateString(),
+      linkURL: getInvitationLink(item),
     }));
   }
 
