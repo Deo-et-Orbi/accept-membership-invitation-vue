@@ -11,7 +11,7 @@ jobs:
         run: |
           cd invite-to-membership-vue
           npm install
-          npm run build
+          npm run build-lib
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
