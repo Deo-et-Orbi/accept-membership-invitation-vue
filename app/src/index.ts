@@ -12,7 +12,7 @@ Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 Vue.config.productionTip = false;
 
-export async function mountInviteToMembershipVue(
+export async function mountAcceptMembershipInvitationVue(
   mountTarget: string
 ): Promise<void> {
   async function initFirebaseFromJSON(url: string) {

@@ -1,10 +1,10 @@
-import { mountInviteToMembershipVue } from "./index";
+import { mountAcceptMembershipInvitationVue } from "./index";
 export * from "./index";
 
-window.mountInviteToMembershipVue = mountInviteToMembershipVue;
+window.mountAcceptMembershipInvitationVue = mountAcceptMembershipInvitationVue;
 
 declare global {
   interface Window {
-    mountInviteToMembershipVue: typeof mountInviteToMembershipVue;
+    mountAcceptMembershipInvitationVue: typeof mountAcceptMembershipInvitationVue;
   }
 }

@@ -5,12 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-lib": "rm -rf dist && vue-cli-service build --target lib --inline-vue --name invitetomembershipvue src/index.ts",
+    "build-lib": "rm -rf dist && vue-cli-service build --target lib --inline-vue --name acceptmembershipinvitationvue src/index.ts",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "bootstrap": "^4.6.0",
-    "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
     "firebase": "^8.3.1",
     "firebase-app": "0.0.1",
