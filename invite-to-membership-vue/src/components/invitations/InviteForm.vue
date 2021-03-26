@@ -1,5 +1,5 @@
 <template>
-  <b-form @submit="onSubmit" @reset="onReset">
+  <b-form @submit.prevent="onSubmit" @reset="onReset">
     <b-form-group
       id="input-group-1"
       label-for="input-1"
@@ -33,11 +33,13 @@
     >
     <b-button type="reset" variant="secondary">Resetuj formularz</b-button>
 
-    <StatefulResource :resource="inviteResultResource">
-      <b-alert variant="success" show>
-        Udało się. Wyślij tej osobie link zaproszenia: {{ invitationLink }}
-      </b-alert>
-    </StatefulResource>
+    <div class="mt-3">
+      <StatefulResource :resource="inviteResultResource">
+        <b-alert variant="success" show>
+          Udało się. Wyślij tej osobie link zaproszenia: {{ invitationLink }}
+        </b-alert>
+      </StatefulResource>
+    </div>
   </b-form>
 </template>
 

@@ -4,7 +4,7 @@ export async function fetchFromApi<T>(path: string): Promise<T> {
   const user = firebase.auth().currentUser;
   if (!user) throw new Error("Not logged in");
   const idToken = await user.getIdToken();
-  const fullURL = "https://deoetorbi.com/nasze/" + path;
+  const fullURL = "https://deoetorbi.com/nasze/" + path + "?rnd=" + Date.now();
   const result = await fetch(fullURL, {
     headers: { Authorization: "Bearer " + idToken },
   });
@@ -19,7 +19,7 @@ export async function postToApi<T, R>(path: string, data: T): Promise<R> {
   const user = firebase.auth().currentUser;
   if (!user) throw new Error("Not logged in");
   const idToken = await user.getIdToken();
-  const fullURL = "https://deoetorbi.com/nasze/" + path;
+  const fullURL = "https://deoetorbi.com/nasze/" + path + "?rnd=" + Date.now();
   const result = await fetch(fullURL, {
     method: "POST",
     headers: {
