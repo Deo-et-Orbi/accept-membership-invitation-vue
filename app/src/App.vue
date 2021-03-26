@@ -1,32 +1,58 @@
 <template>
   <div id="app">
-    <EnsureLoggedIn>
-      <template #loggedIn>
-        Czy chcesz użyć tego konta jako konta członkowskiego Deo et Orbi?
-      </template>
-      <template #loggedOut><LogInScreen /></template>
-    </EnsureLoggedIn>
+    <StatefulResource :resource="invitationRes">
+      <InvitationWelcome v-if="invitation" :invitation="invitation" />
+      <EnsureLoggedIn>
+        <template #loggedIn>
+          Czy chcesz użyć tego konta jako konta członkowskiego Deo et Orbi?
+        </template>
+        <template #loggedOut><LogInScreen /></template>
+      </EnsureLoggedIn>
+    </StatefulResource>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import {
-  EnsureLoggedIn,
-  LogInScreen,
-  AppBar,
-  InvitationsPanel,
-} from "./components";
+import { EnsureLoggedIn, LogInScreen, InvitationWelcome } from "./components";
+import { Invitation } from "./domain";
+import { Resource, StatefulResource } from "vue-stateful-resource";
+import { loadInvitation } from "./services";
 
 @Component({
   components: {
     EnsureLoggedIn,
     LogInScreen,
-    AppBar,
-    InvitationsPanel,
+    StatefulResource,
+    InvitationWelcome,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  invitationRes = Resource.empty<Invitation>();
+
+  beforeMount(): void {
+    this.loadInvitation();
+  }
+
+  loadInvitation(): void {
+    Resource.fetchResource(
+      "invitation",
+      () => this.doLoadInvitation(),
+      (res) => (this.invitationRes = res)
+    );
+  }
+
+  async doLoadInvitation(): Promise<Invitation> {
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("deo");
+    if (!id) throw new Error("Brakuje parametru z ID zaproszenia");
+    return loadInvitation(id);
+  }
+
+  get invitation(): Invitation | undefined {
+    return this.invitationRes.result || undefined;
+  }
+}
 </script>
 
 <style>

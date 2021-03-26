@@ -15,6 +15,24 @@ export async function fetchFromApi<T>(path: string): Promise<T> {
   return result.json();
 }
 
+export async function fetchFromPublicApi<T>(path: string): Promise<T> {
+  const fullURL = "https://deoetorbi.com/nasze/" + path + "?rnd=" + Date.now();
+  const result = await fetch(fullURL, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+  });
+  console.log(result);
+  if (!result.ok) {
+    const bodyJson = await result.json();
+    throw new Error(bodyJson.error || "No error description");
+  }
+  console.log(result);
+  return result.json();
+}
+
 export async function postToApi<T, R>(path: string, data: T): Promise<R> {
   const user = firebase.auth().currentUser;
   if (!user) throw new Error("Not logged in");
