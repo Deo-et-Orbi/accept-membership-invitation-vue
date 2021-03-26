@@ -9,7 +9,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          cd invite-to-membership-vue
+          cd app
           npm install
           npm run build-lib
 
@@ -17,4 +17,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: latest_dist
-          folder: invite-to-membership-vue/dist
+          folder: app/dist
