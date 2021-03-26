@@ -1,7 +1,7 @@
 <template>
   <div class="log-in-screen">
     <h2>Zaloguj się</h2>
-    <section id="firebaseui-auth-container"></section>
+    <section id="firebaseui-auth-container">Ładowanie autoryzacji...</section>
   </div>
 </template>
 
@@ -17,6 +17,7 @@ export default class LogInScreen extends Vue {
     this.initializeFirebaseUI();
   }
   private initializeFirebaseUI() {
+    console.log("Loading auth...");
     let ui = firebaseui.auth.AuthUI.getInstance();
     if (!ui) {
       ui = new firebaseui.auth.AuthUI(firebase.auth());
@@ -28,6 +29,7 @@ export default class LogInScreen extends Vue {
         firebase.auth.EmailAuthProvider.PROVIDER_ID,
       ],
     };
+    console.log("Mounting auth...");
     ui.start("#firebaseui-auth-container", uiConfig);
   }
 }
