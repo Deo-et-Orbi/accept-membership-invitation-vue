@@ -22545,7 +22545,7 @@ var dist_index_esm = __webpack_require__("ea7b");
 // EXTERNAL MODULE: ./node_modules/vue/dist/vue.runtime.esm.js
 var vue_runtime_esm = __webpack_require__("2b0e");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2f3aa79c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=7c4401a6&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0d0c2bf6-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=7c4401a6&
 var Appvue_type_template_id_7c4401a6_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('StatefulResource',{attrs:{"resource":_vm.invitationRes}},[(_vm.invitation)?_c('InvitationWelcome',{attrs:{"invitation":_vm.invitation}}):_vm._e(),_c('EnsureLoggedIn',{scopedSlots:_vm._u([{key:"loggedIn",fn:function(){return [_c('AcceptMembership',{attrs:{"invitation":_vm.invitation},on:{"decline":function($event){return _vm.logOut()},"accepted":function($event){return _vm.openThanksPage()}}})]},proxy:true},{key:"loggedOut",fn:function(){return [_c('LogInScreen')]},proxy:true}])})],1)],1)}
 var staticRenderFns = []
 
@@ -23614,7 +23614,7 @@ function Watch(path, options) {
 
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2f3aa79c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/EnsureLoggedIn.vue?vue&type=template&id=3de49de9&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0d0c2bf6-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/EnsureLoggedIn.vue?vue&type=template&id=3de49de9&
 var EnsureLoggedInvue_type_template_id_3de49de9_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.isLoggedIn)?_vm._t("loggedIn"):_vm._t("loggedOut")],2)}
 var EnsureLoggedInvue_type_template_id_3de49de9_staticRenderFns = []
 
@@ -23787,7 +23787,7 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var components_EnsureLoggedIn = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2f3aa79c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/LogInScreen.vue?vue&type=template&id=8dffb888&scoped=true&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0d0c2bf6-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/LogInScreen.vue?vue&type=template&id=8dffb888&scoped=true&
 var LogInScreenvue_type_template_id_8dffb888_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"log-in-screen"},[_c('Explanation'),_c('section',{attrs:{"id":"firebaseui-auth-container"}})],1)}
 var LogInScreenvue_type_template_id_8dffb888_scoped_true_staticRenderFns = []
 
@@ -23800,7 +23800,7 @@ var firebaseui = __webpack_require__("c9b9");
 // EXTERNAL MODULE: ./node_modules/firebaseui/dist/esm.js
 var esm = __webpack_require__("2398");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2f3aa79c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Explanation.vue?vue&type=template&id=02ea39b0&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0d0c2bf6-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Explanation.vue?vue&type=template&id=02ea39b0&
 var Explanationvue_type_template_id_02ea39b0_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
 var Explanationvue_type_template_id_02ea39b0_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('p',[_c('strong',[_vm._v("To działa tak:")]),_c('ol',[_c('li',[_vm._v("Logujesz się (na konto google albo zakładasz nowe konto z hasłem)")]),_c('li',[_vm._v("Zatwierdzasz członkowstwo")]),_c('li',[_vm._v("Pobierasz aplikację ze sklepu Play")]),_c('li',[_vm._v("Logujesz się w aplikacji i cieszysz się członkostwem")])])])])}]
 
@@ -23934,7 +23934,7 @@ var LogInScreen_component = normalizeComponent(
 )
 
 /* harmony default export */ var components_LogInScreen = (LogInScreen_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2f3aa79c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/InvitationWelcome.vue?vue&type=template&id=8433a910&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0d0c2bf6-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/InvitationWelcome.vue?vue&type=template&id=8433a910&
 var InvitationWelcomevue_type_template_id_8433a910_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h2',[_vm._v("Hej "+_vm._s(_vm.displayName)+"!")]),_c('p',[_vm._v(_vm._s(_vm.message))]),_c('h3',[_vm._v("Już prawie możesz skorzystać z aplikacji mobilnej Deo et Orbi!")]),_c('p',[_vm._v("Jeszcze tylko zaloguj się/załóż konto.")])])}
 var InvitationWelcomevue_type_template_id_8433a910_staticRenderFns = []
 
@@ -24001,7 +24001,7 @@ var InvitationWelcome_component = normalizeComponent(
 )
 
 /* harmony default export */ var components_InvitationWelcome = (InvitationWelcome_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2f3aa79c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/AcceptMembership.vue?vue&type=template&id=4dcd709d&scoped=true&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0d0c2bf6-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/AcceptMembership.vue?vue&type=template&id=4dcd709d&scoped=true&
 var AcceptMembershipvue_type_template_id_4dcd709d_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"account-modal"},[(_vm.profilePhotoURL)?_c('img',{staticClass:"profile-photo",attrs:{"src":_vm.profilePhotoURL,"alt":"Zdjęcie profilowe"}}):_vm._e(),_c('div',[_c('strong',[_vm._v(_vm._s(_vm.displayName))])]),_c('p',[_vm._v("Czy chcesz użyć tego konta jako konta członkowskiego Deo et Orbi?")]),_c('div',{staticClass:"buttons"},[_c('button',{staticClass:"yes",on:{"click":function($event){return _vm.accept()}}},[_vm._v("Tak, to będzie moje konto")]),_c('button',{staticClass:"no",on:{"click":function($event){return _vm.decline()}}},[_vm._v("Zaloguj się na inne konto")])]),(_vm.error)?_c('p',{staticClass:"error"},[_vm._v(_vm._s(_vm.error))]):_vm._e()])])}
 var AcceptMembershipvue_type_template_id_4dcd709d_scoped_true_staticRenderFns = []
 
@@ -24195,10 +24195,10 @@ function _postToApi() {
 // CONCATENATED MODULE: ./src/services.ts
 
 function services_loadInvitation(id) {
-  return fetchFromPublicApi("public_api/invitation/".concat(id));
+  return fetchFromPublicApi("invitation/get/".concat(id));
 }
 function acceptMembership(invitationID) {
-  return postToApi("nonmember_api/accept_invitation", {
+  return postToApi("invitation/accept", {
     invitationID: invitationID
   });
 }
